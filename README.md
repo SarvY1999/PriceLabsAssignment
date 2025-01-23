@@ -55,7 +55,7 @@ This will open the Cypress Test Runner. From here, you can select and run indivi
 The tests are configured to generate reports using the Mochawesome reporter. After running the tests, the reports will be saved in the `cypress/results` directory. To run the tests and generate reports, use the following command:
 
 ```bash
-npx cypress run --reporter mochawesome
+npx cypress run
 ```
 
-The reports will be available in the `mochawesome-report` directory. You can open the `mochawesome-report/index.html` file to view the detailed report in your browser.
+The reports will be available in the `reports` directory. You can open the `reports/index.html` file to view the detailed report in your browser.
