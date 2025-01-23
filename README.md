@@ -29,7 +29,7 @@ Ensure you have the following installed:
 
    ```bash
    git clone https://github.com/SarvY1999/PriceLabsAssignment.git priceLabsAssignment
-   cd PriceLabsAssignment
+   cd priceLabsAssignment
    ```
 
 2. Install dependencies:
