@@ -22,18 +22,18 @@ describe("Verify functionality of Date Specific Override.", () => {
                 pricingPage.filterAndSelectListing(data);
             });
 
-            // Step 4: Calendar tab should be selected by default
             command.logger("Checking if Calendar Tab is selected by default");
             pricingPage.isTabSelected("Calendar", "true");
 
-            //Step 5: Select any available date
+            //Step 4: Select any available date
             command.logger("Selecting Current Date");
             pricingPage.selectDate(currentDay);
 
+            // Step 5: Verify following controls on Date Specific Override window -
             // Step 6 & 7: Verify following controls on Date Specific Override window
             // Start Date & End Date 
             command.logger("Verifying label of DSO Page");
-            assert.verifyLblTxt(dateSpcOvdPage.locators.dateSpecificOverrideLbl , "Date Specific Overrides");
+            assert.verifyLblTxt(dateSpcOvdPage.locators.dateSpecificOverrideLbl, "Date Specific Overrides");
 
             // Enter Start Date and End Date
             command.logger("Entering Start Date and End Date");
@@ -42,7 +42,7 @@ describe("Verify functionality of Date Specific Override.", () => {
             // Step 7: Price Settings Sections
             // Final Price Dropdown - Fixed, % change on recommended price, Textbox for price
             command.logger("Checking Final Price Dropdown's option count");
-            assert.verifyDropddownItemsCount(dateSpcOvdPage.locators.finalPriceDrpDwn , 2); // Verify there are 2 options
+            assert.verifyDropddownItemsCount(dateSpcOvdPage.locators.finalPriceDrpDwn, 2); // Verify there are 2 options
 
             command.logger("Verifying Final Price Dropdown values - Fixed, % change on recommended price, Textbox for price");
             assert.verifyDropdownItems(dateSpcOvdPage.locators.finalPriceDrpDwn, 'Fixed~% change on recommended price');
@@ -53,7 +53,7 @@ describe("Verify functionality of Date Specific Override.", () => {
 
             // Step 7: Minimun Price - Fixed, % change on min price, change on base price, Textbox for price
             command.logger("Entering price in final Price txtbox");
-            assert.verifyDropddownItemsCount(dateSpcOvdPage.locators.minimumPriceDrpDwn , 3);
+            assert.verifyDropddownItemsCount(dateSpcOvdPage.locators.minimumPriceDrpDwn, 3);
 
             // Verify the first option's text
             command.logger("Verifying Minimun Price dropdown's options");
@@ -65,8 +65,8 @@ describe("Verify functionality of Date Specific Override.", () => {
 
             // Step 7: Maximum Price - Fixed, % change on max price, change on base price, Textbox for price Base Price Textbox
             command.logger("Verifying Maximum Price dropdown's option count");
-            assert.verifyDropddownItemsCount(dateSpcOvdPage.locators.maximumPriceDrpDwn , 3);// Verify there are 3 options
-    
+            assert.verifyDropddownItemsCount(dateSpcOvdPage.locators.maximumPriceDrpDwn, 3);// Verify there are 3 options
+
             // Verify the first option's text
             command.logger("Verifying Maximum Price dropdown's options");
             assert.verifyDropdownItems(dateSpcOvdPage.locators.maximumPriceDrpDwn, 'Fixed~% change on max price~% change on base price');

@@ -26,7 +26,7 @@ describe("Validate that duplicate group names cannot be created.", () => {
         customization.selectTab("Groups");
 
         // Step 4: Click on "+Create Group" button
-        // Step 5: Add Group Name in the Group Name textbox and click Create Button
+        // Step 5: Enter a unique group name (e.g., "Group A") and save.
         // Step 6: Verify that the group is created successfully.
         // Step 7: Click on the "Create Group" button again.
         // Enter the same group name (e.g., "Group A") and attempt to save.
