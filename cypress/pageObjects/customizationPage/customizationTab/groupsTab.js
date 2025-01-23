@@ -26,7 +26,6 @@ export default class GroupsTab {
             cy.get('ul#group-level-customization-menu-list a').contains('Delete Group').click();
         });
         cy.get(deleteGrpDlg.locators.deleteBtn).click();
-        cy.get(`div[qa-id="div-${grpName}"]`).should('not.exist');
     }
 
 

@@ -41,8 +41,8 @@ Cypress.Commands.add('Login', (uname, pwd) => {
 
     // veriying if landing page is visible or not
     cy.origin(Cypress.env('appUrl'), () => {
-        const Common = Cypress.require('../common/selectFeature');
-        const main = new Common();
-        cy.get(main.logo).should('be.visible');
+        const Main = Cypress.require('../common/selectFeature');
+        const main = new Main();
+        cy.get(main.locators.logo).should('be.visible');
     })
 });
