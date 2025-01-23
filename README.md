@@ -1,4 +1,4 @@
-Here's a draft README file for your project:
+
 
 ---
 
